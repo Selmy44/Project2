@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Media Share</title>
+    <style>
+        body{
+            background-color: powderblue;
+        }
+        .social-media-share {
+            display: inline-block;
+            background-color: #3b5998;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .social-media-share:hover {
+            background-color: #365899;
+        }
+    </style>
+</head>
+<body>
+    <h1>Share This Content</h1>
+    <p>Click the button to share this awesome content!</p>
+
+    <!-- Replace the 'YOUR_SHARE_URL' with the actual URL you want to share -->
+    <a class="social-media-share" id="share-button" href="javascript:void(0);" onclick="shareOnSocialMedia('YOUR_SHARE_URL')">Share on Social Media</a>
+
+    <script>
+        function shareOnSocialMedia(url) {
+            // Replace these URLs with actual social media sharing URLs
+            var facebookShareURL = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
+            var twitterShareURL = 'https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20content%20&url=' + encodeURIComponent(url);
+            var linkedInShareURL = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url);
+
+            // Open new windows to share on different social media platforms
+            window.open(facebookShareURL, '_blank');
+            window.open(twitterShareURL, '_blank');
+            window.open(linkedInShareURL, '_blank');
+        }
+    </script>
+</body>
+</html>
